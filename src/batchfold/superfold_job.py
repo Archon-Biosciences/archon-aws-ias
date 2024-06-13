@@ -31,7 +31,7 @@ class SuperfoldJob(BatchFoldJob):
         command_list.extend([f"-o outputs/:{self.output_s3_uri}"])
         command_list.extend(
             [
-                "python run_superfold.py",
+                "python /opt/superfold/run_superfold.py",
                 f"/opt/superfold/inputs/{input_filename}",
                 f"--alphafold_weights={self.weights_dir}",
             ]
